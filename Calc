@@ -1,0 +1,18 @@
+from tkinter import *
+
+root = Tk()
+root.title('Time to Calculate!')
+root.geometry("400x400")
+
+myTextbox=Entry(root,width=30, bg="pink", font=('Times_New_Roman',60))
+myTextbox.pack()
+label=Label(root,font=('Times_New_Roman',30))
+
+def calculate():
+    label.config(text='' +str(eval(myTextbox.get())))
+    label.pack()
+
+button=Button(root,text='Enter',font=('Times_New_Roman',45),command=calculate)
+button.pack()
+
+root.mainloop()
